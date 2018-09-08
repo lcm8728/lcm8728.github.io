@@ -85,10 +85,10 @@ social:
 
   - name: GitHub
     icon: github
-    username: 
-    url:
+    username: lcm8728
+    url: https://github.com/lcm8728
     desc: Fork me on GitHub
-    share: false
+    share: true
 
   - name: LinkedIn
     icon: linkedin
