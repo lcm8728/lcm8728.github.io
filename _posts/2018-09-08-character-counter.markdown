@@ -21,7 +21,7 @@ categories: project
 우선 프로그램의 창을 계속해서 불러와야 하는 과정을 없애기 위해, 윈도우를 항상 위에 있도록 하였다. 그리고 마찬가지의 이유로, 윈도우가 활성화 되어 있지 않을 때도 작동하게 하기 위하여 키보드 hooking을 가능하도록 하였다.  
 위와 같은 매커니즘으로 다른 어플리케이션에서 단축키인 Ctrl + C + C가 입력되면 글자 수를 출력하게 된다. Ctrl + C 과정에서 클립보드에 글을 복사하고, 다시 한 번 C가 입력되는 순간 클립보드의 글자 수를 불러와 글자 수를 계산한다. 단축키는 어떤 에디터를 사용하더라도 문제가 없도록 설정하였다.  
   
-[github](https://github.com/lcm8728/character_counter)
+[https://github.com/lcm8728/character_counter](https://github.com/lcm8728/character_counter)
   
 ## 실행화면
 ![text](/assets/character_counter_example1.png)
