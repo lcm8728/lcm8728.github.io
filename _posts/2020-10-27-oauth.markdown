@@ -1,0 +1,25 @@
+# OAuth 2.0
+
+요즘 많은 서비스에서 사용중인 "구글 아이디로 로그인 하기", "카카오 아이디로 로그인 하기", "네이버 아이디로 로그인 하기" 등은 OAuth라는 방법 위에서 동작하고 있다. 그렇다면 OAuth는 무엇이고, 어떻게 다른 서비스의 아이디로 로그인을 하여 해당 정보를 사용할 수 있는 것일까?
+
+## What is OAuth
+
+OAuth이 무엇인지는 [rfc-5849](https://tools.ietf.org/html/rfc5849)의 Abstract에 간단히 정의되어 있다.
+
+> ```
+> OAuth provides a method for clients to access server resources on behalf of a resource owner (such as a different client or an end-user).
+> ```
+
+해석해보자면, **클라이언트**에게 **리소스 소유주**를 대신하여 **리소스 서버**에 접근할 수 있도록 해주는 방법을 제공해주는 것이라고 할 수 있다. 예를 들어, **카카오맵(클라이언트)**에서 사용자의 **카카오톡 프로필 사진 정보(리소스)**가 필요하다면, 사용자의 프로필 사진이 저장된 **카카오 서버(리소스 서버)**에서 프로필 사진 정보를 얻어올 수 있도록 하는 것이 OAuth라는 프로토콜인 셈이다.
+
+우리가 흔히 사용하는 OAuth는 [OAuth 2.0](https://tools.ietf.org/html/rfc6749)이다. 1.0과의 차이는 다음 기회에..
+
+## Roles
+
+OAuth에서는 총 4개의 역할을 정의하고 있다.
+
+- 리소스 소유주Resource owner: 리소스에 대해 접근을 허가할 수 있는 존재이다. 리소스 소유주가 사람이라면 end-user라고 불린다.
+- 리소스 서버Resource Server: 리소스를 제공하는 서버이다. 아래에서 배우게 될 Access token을 사용하여 자원을 제공한다.
+- 클라이언트Client: 리소스를 요청하는 주체이다.
+- 인증 서버Authorization Server: 리소스 소유주를 식별하고, 클라이언트에게 Access token과 Refresh Token을 발급해주는 주체이다.
+
