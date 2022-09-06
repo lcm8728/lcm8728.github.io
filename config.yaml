@@ -4,6 +4,12 @@ paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
+sitemap:
+  # always, hourly daily, weekly, monthly, yearly, never
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -26,9 +32,9 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
@@ -39,7 +45,7 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true
-  tocopen: true
+  tocopen: false
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -131,3 +137,4 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+
